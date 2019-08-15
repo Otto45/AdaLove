@@ -1,4 +1,5 @@
-﻿using AdaLove.DomainLayer.DataLayer;
+﻿using System.Data.SqlClient;
+using AdaLove.DomainLayer.DataLayer;
 using AdaLove.DomainLayer.Managers;
 
 namespace AdaLove.DomainLayer.ServiceLocator
@@ -13,6 +14,16 @@ namespace AdaLove.DomainLayer.ServiceLocator
         protected override StudentManager CreateStudentManagerCore()
         {
             return new StudentManager();
+        }
+
+        protected override StudentDataManagerBase CreateStudentDataManagerCore()
+        {
+            return new StudentDataManager(this);
+        }
+
+        protected override SqlConnection CreateDbConnectionCore(string connectionStringName)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
