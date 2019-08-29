@@ -24,12 +24,15 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/assets/css/purpose-blue-dark.css",
+              "src/assets/css/purpose-blue-light.css",
+              "src/assets/libs/@fortawesome/fontawesome-free/css/all.min.css",
               "src/styles.css"
             ],
             "scripts": [
-              "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+              "src/assets/js/purpose.js",
+              "src/assets/js/purpose.core.js",
+              "src/assets/libs/@fortawesome/fontawesome-free/js/all.min.js"
             ]
           },
           "configurations": {
