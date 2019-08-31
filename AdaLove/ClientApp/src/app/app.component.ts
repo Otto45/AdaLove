@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'AdaLove';
+  public title = 'AdaLove';
+  public currentYear = new Date().getFullYear();
+
+  public scrollToTop() {
+    $("html, body").animate({ scrollTop: 0 }, 600); 
+    return false;
+  }
 }

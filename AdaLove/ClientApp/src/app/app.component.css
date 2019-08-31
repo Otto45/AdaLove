@@ -1,0 +1,8 @@
+.top-of-page-link {
+    cursor: pointer;
+    display: table;
+}
+
+.top-of-page-link:hover {
+    color: rgb(149, 176, 201);
+}

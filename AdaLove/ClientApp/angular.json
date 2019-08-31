@@ -24,14 +24,15 @@
               "src/assets"
             ],
             "styles": [
-              "src/assets/css/purpose-blue-dark.css",
-              "src/assets/css/purpose-blue-light.css",
               "src/assets/libs/@fortawesome/fontawesome-free/css/all.min.css",
+              "src/assets/libs/swiper/dist/css/swiper.min.css",
+              "src/assets/css/purpose-blue-dark.css",
               "src/styles.css"
             ],
             "scripts": [
-              "src/assets/js/purpose.js",
               "src/assets/js/purpose.core.js",
+              "src/assets/libs/swiper/dist/js/swiper.min.js",
+              "src/assets/js/purpose.js",
               "src/assets/libs/@fortawesome/fontawesome-free/js/all.min.js"
             ]
           },
