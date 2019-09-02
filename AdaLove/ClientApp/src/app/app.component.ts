@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,11 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public title = 'AdaLove';
   public currentYear = new Date().getFullYear();
 
-  public scrollToTop() {
-    $("html, body").animate({ scrollTop: 0 }, 600); 
-    return false;
+  constructor(private router: Router){
+
+  }
+
+  public navigateToLanding() {
+    this.router.navigate(['/']);
   }
 }
