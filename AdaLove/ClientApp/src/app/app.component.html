@@ -1,6 +1,6 @@
-<header class="header header-transparent" id="header-main">
+<header class="header" id="header-main">
     <!-- Main navbar -->
-    <nav class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-dark bg-dark" id="navbar-main">
+    <nav class="navbar navbar-main navbar-expand-lg navbar-dark bg-dark" id="navbar-main">
       <div class="container px-lg-0">
         <!-- Logo -->
         <a class="navbar-brand mr-lg-5" routerLink="/">
@@ -16,7 +16,7 @@
           <ul class="navbar-nav align-items-lg-center">
             <!-- Home - Overview -->
             <li class="nav-item">
-              <a class="nav-link" href="#">Overview</a>
+              <a class="nav-link" routerLink="/">Overview</a>
             </li>
             <!-- Courses menu -->
             <li class="nav-item dropdown dropdown-animate" data-toggle="hover">
@@ -42,7 +42,7 @@
                     </a>
                     <ul class="dropdown-menu">
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <a class="dropdown-item" routerLink="/lessons/cs/basics/module1">
                           Level 1 - The Basics
                         </a>
                       </li>
@@ -138,48 +138,3 @@
   </header>
 
 <router-outlet></router-outlet>
-
-<footer id="footer-main">
-    <div class="footer footer-dark bg-gradient-primary">
-      <div class="container">
-        <div class="row pt-md">
-          <div class="col-lg-4 mb-5 mb-lg-0">
-            <h4 class="top-of-page-link" (click)="navigateToLanding()">AdaLove</h4>
-            <p>AdaLove crafts unique, interactive lessons to empower the software engineers and data scientists of
-              tomorrow.</p>
-          </div>
-          <div class="col-lg-2 col-6 col-sm-4 ml-lg-auto mb-5 mb-lg-0">
-            <h6 class="heading mb-3">Account</h6>
-            <ul class="list-unstyled">
-              <li><a href="#">Profile</a></li>
-              <li><a href="#">Settings</a></li>
-              <li><a href="#">Billing</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-2 col-6 col-sm-4 mb-5 mb-lg-0">
-            <h6 class="heading mb-3">About</h6>
-            <ul class="list-unstyled text-small">
-              <li><a href="#">Our Namesake</a></li>
-              <li><a href="#">Our Mission</a></li>
-              <li><a href="#">Contact Us</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-2 col-sm-4 mb-5 mb-lg-0">
-            <h6 class="heading mb-3">Company</h6>
-            <ul class="list-unstyled">
-              <li><a href="#">Terms</a></li>
-              <li><a href="#">Privacy</a></li>
-              <li><a href="#">Support</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="row align-items-center justify-content-md-between py-4 mt-4 delimiter-top">
-          <div class="col-md-6">
-            <div class="copyright text-sm font-weight-bold text-center text-md-left">
-              &copy; {{currentYear}}-{{currentYear + 1}} AdaLove, LLC. All rights reserved.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
