@@ -9,6 +9,7 @@ import { PageNotFoundComponent } from './components/utility/page-not-found/page-
 import { Module1BinaryComponent } from './components/courses/computer-science/lesson-1-basics/module1-binary/module1-binary.component';
 import { Exercise1BinaryComponent } from './components/courses/computer-science/lesson-1-basics/module1-binary/exercises/exercise1-binary/exercise1-binary.component';
 import { FooterComponent } from './components/utility/footer/footer.component';
+import { Exercise2BinaryComponent } from './components/courses/computer-science/lesson-1-basics/module1-binary/exercises/exercise2-binary/exercise2-binary.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FooterComponent } from './components/utility/footer/footer.component';
     PageNotFoundComponent,
     Module1BinaryComponent,
     Exercise1BinaryComponent,
-    FooterComponent
+    FooterComponent,
+    Exercise2BinaryComponent
   ],
   imports: [
     BrowserModule,

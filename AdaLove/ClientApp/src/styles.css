@@ -1,3 +1,8 @@
-.training-text-section p {
+.training-text-section {
+    margin-bottom: 15px;
+}
+
+.training-text-section span {
     color: #e3ebf6;
+    display: inline-block;
 }

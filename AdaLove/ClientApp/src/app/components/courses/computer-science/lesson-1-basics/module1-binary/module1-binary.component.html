@@ -8,20 +8,22 @@
                     </div>
                     <div class="col-4">
                         <div class="progress">
-                            <div class="progress-bar bg-success" role="progressbar" style="width: 75%"
-                                aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="4"
+                                aria-valuemin="0" aria-valuemax="5"></div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="card-body">
                 <app-exercise1-binary></app-exercise1-binary>
+                <app-exercise2-binary></app-exercise2-binary>
             </div>
             <div class="card-footer">
                 <div class="row align-items-center">
                     <div class="col-12">
-                        <button type="button" class="btn btn-sm btn-primary float-right ">Check Answer</button>
-                        <button type="button" class="btn btn-sm btn-success float-right d-none">Next</button>
+                        <button type="button" class="btn btn-sm btn-success float-right d-none">Previous</button>
+                        <button type="button" class="btn btn-sm btn-success float-right disabled">Next</button>
+                        <button type="button" class="btn btn-sm btn-primary float-right d-none">Check Answer</button>
                         <button type="button" class="btn btn-sm btn-danger float-right d-none">Try Again</button>
                     </div>
                 </div>
