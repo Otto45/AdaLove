@@ -10,6 +10,7 @@ import { Module1BinaryComponent } from './components/courses/computer-science/le
 import { Exercise1BinaryComponent } from './components/courses/computer-science/lesson-1-basics/module1-binary/exercises/exercise1-binary/exercise1-binary.component';
 import { FooterComponent } from './components/utility/footer/footer.component';
 import { Exercise2BinaryComponent } from './components/courses/computer-science/lesson-1-basics/module1-binary/exercises/exercise2-binary/exercise2-binary.component';
+import { LessonModuleComponent } from './core/lesson-module/lesson-module.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { Exercise2BinaryComponent } from './components/courses/computer-science/
     Module1BinaryComponent,
     Exercise1BinaryComponent,
     FooterComponent,
-    Exercise2BinaryComponent
+    Exercise2BinaryComponent,
+    LessonModuleComponent
   ],
   imports: [
     BrowserModule,

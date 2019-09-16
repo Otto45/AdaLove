@@ -1,33 +1,4 @@
-<section class="slice slice-lg bg-gradient-dark" data-offset-top="#header-main">
-    <div class="container">
-        <div class="card">
-            <div class="card-header">
-                <div class="row align-items-center">
-                    <div class="col-8">
-                        <h5 class="card-title mb-0">Module 1 - Binary</h5>
-                    </div>
-                    <div class="col-4">
-                        <div class="progress">
-                            <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="4"
-                                aria-valuemin="0" aria-valuemax="5"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card-body">
-                <app-exercise1-binary></app-exercise1-binary>
-                <app-exercise2-binary></app-exercise2-binary>
-            </div>
-            <div class="card-footer">
-                <div class="row align-items-center">
-                    <div class="col-12">
-                        <button type="button" class="btn btn-sm btn-success float-right d-none">Previous</button>
-                        <button type="button" class="btn btn-sm btn-success float-right d-none">Next</button>
-                        <button type="button" class="btn btn-sm btn-primary float-right " (click)="checkAnswer()">Check Answer</button>
-                        <button type="button" class="btn btn-sm btn-danger float-right " (click)="tryAgain()">Try Again</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<app-lesson-module moduleTitle="Module 1 - Binary">
+    <app-exercise1-binary></app-exercise1-binary>
+    <app-exercise2-binary></app-exercise2-binary>
+</app-lesson-module>
