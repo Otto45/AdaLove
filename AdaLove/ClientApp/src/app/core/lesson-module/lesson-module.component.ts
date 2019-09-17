@@ -1,5 +1,6 @@
-import { Component, AfterViewInit, QueryList, ContentChildren, Input } from '@angular/core';
+import { Component, AfterViewInit, QueryList, ContentChildren, Input, ContentChild } from '@angular/core';
 import { ExerciseDirective } from '../custom-directives/ExerciseDirective';
+import { Exercise } from '../abstract-classes/Exercise';
 
 @Component({
   selector: 'app-lesson-module',
@@ -7,30 +8,25 @@ import { ExerciseDirective } from '../custom-directives/ExerciseDirective';
   styleUrls: ['./lesson-module.component.css']
 })
 export class LessonModuleComponent implements AfterViewInit {
-  private activeExcerciseIndex: number;
+  private activeExcerciseIndex: number = 0;
   private exercises: ExerciseDirective[];
 
-  @ContentChildren(ExerciseDirective) exerciseContent: QueryList<ExerciseDirective>;
+  @ContentChildren(ExerciseDirective) availableExercisesRefs: QueryList<ExerciseDirective>;
+  @ContentChild(Exercise, {static: false}) currentExercise: Exercise;
 
   @Input() moduleTitle: string;
 
   ngAfterViewInit(): void {
-    this.exerciseContent.forEach((exercise, index) => {
-      if (index > 0) {
-        exercise.hide
-      }
-    });
-    
-    this.exercises = this.exerciseContent.toArray();
-    this.activeExcerciseIndex = 0;
+    this.availableExercisesRefs.first.display();
+    this.exercises = this.availableExercisesRefs.toArray();
   }
 
   public tryAgain(): void {
-    this.exercises[this.activeExcerciseIndex].tryAgain();
+    this.currentExercise.tryAgain();
   }
 
   public checkAnswer(): void {
-    this.exercises[this.activeExcerciseIndex].checkAnswer();
+    this.currentExercise.checkAnswer();
   }
 
   public nextExercise(): void {
