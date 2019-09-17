@@ -1,5 +1,5 @@
 import { Component, AfterViewInit, QueryList, ContentChildren, Input } from '@angular/core';
-import { Exercise } from 'src/app/core/Exercise';
+import { ExerciseDirective } from '../custom-directives/ExerciseDirective';
 
 @Component({
   selector: 'app-lesson-module',
@@ -8,16 +8,16 @@ import { Exercise } from 'src/app/core/Exercise';
 })
 export class LessonModuleComponent implements AfterViewInit {
   private activeExcerciseIndex: number;
-  private exercises: Exercise[];
+  private exercises: ExerciseDirective[];
 
-  @ContentChildren(Exercise) exerciseContent: QueryList<Exercise>;
+  @ContentChildren(ExerciseDirective) exerciseContent: QueryList<ExerciseDirective>;
 
   @Input() moduleTitle: string;
 
   ngAfterViewInit(): void {
     this.exerciseContent.forEach((exercise, index) => {
       if (index > 0) {
-        exercise.hide();
+        exercise.hide
       }
     });
     
@@ -35,15 +35,17 @@ export class LessonModuleComponent implements AfterViewInit {
 
   public nextExercise(): void {
     if (this.activeExcerciseIndex < this.exercises.length - 1) {
+      this.exercises[this.activeExcerciseIndex].hide();
       this.activeExcerciseIndex++;
-      // TODO: Create infrastructure to only show one exercise at a time and progress to the next one here
+      this.exercises[this.activeExcerciseIndex].display();
     }
   }
 
   public previousExercise(): void {
     if (this.activeExcerciseIndex > 0) {
+      this.exercises[this.activeExcerciseIndex].hide();
       this.activeExcerciseIndex--;
-      // TODO: Create infrastructure to only show one exercise at a time and go back to the previous one here
+      this.exercises[this.activeExcerciseIndex].display();
     }
   }
 }

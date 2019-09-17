@@ -1,5 +1,5 @@
 import { Component, forwardRef } from '@angular/core';
-import { Exercise } from 'src/app/core/Exercise';
+import { Exercise } from 'src/app/core/abstract-classes/Exercise';
 
 @Component({
   selector: 'app-exercise1-binary',
