@@ -7,10 +7,7 @@
                         <h5 class="card-title mb-0">{{moduleTitle}}</h5>
                     </div>
                     <div class="col-4">
-                        <div class="progress">
-                            <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="4"
-                                aria-valuemin="0" aria-valuemax="5"></div>
-                        </div>
+                        <app-lesson-progress-bar [exerciseNumber]="currentExerciseNumber" [totalExerciseCount]="totalExerciseCount"></app-lesson-progress-bar>
                     </div>
                 </div>
             </div>
