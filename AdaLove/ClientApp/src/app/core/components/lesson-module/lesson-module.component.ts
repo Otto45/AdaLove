@@ -1,15 +1,17 @@
-import { Component, AfterViewInit, QueryList, ContentChildren, Input, ContentChild } from '@angular/core';
+import { Component, QueryList, ContentChildren, Input, ContentChild, AfterContentInit, AfterContentChecked, OnDestroy } from '@angular/core';
 import { ExerciseDirective } from '../../custom-directives/ExerciseDirective';
 import { Exercise } from '../../abstract-classes/Exercise';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-lesson-module',
   templateUrl: './lesson-module.component.html',
   styleUrls: ['./lesson-module.component.css']
 })
-export class LessonModuleComponent implements AfterViewInit {
+export class LessonModuleComponent implements AfterContentInit, AfterContentChecked, OnDestroy {
   private activeExcerciseIndex: number = 0;
   private exercises: ExerciseDirective[];
+  private showNextButtonSubscription: Subscription = null;
 
   @ContentChildren(ExerciseDirective) availableExercisesRefs: QueryList<ExerciseDirective>;
   @ContentChild(Exercise, {static: false}) currentExercise: Exercise;
@@ -18,21 +20,34 @@ export class LessonModuleComponent implements AfterViewInit {
 
   public currentExerciseNumber: number;
   public totalExerciseCount: number;
+  public shouldShowNextButton: boolean;
 
-  ngAfterViewInit(): void {
+  // Lifecycle Hooks /////////////////////////////////////////////////////////////////////////////////////////////////
+
+  ngAfterContentInit() {
     this.availableExercisesRefs.first.display();
     this.exercises = this.availableExercisesRefs.toArray();
+    this.currentExerciseNumber = this.activeExcerciseIndex;
+    this.totalExerciseCount = this.exercises.length;
 
-    // B/C of the way Angular works initializing components, a child component will not be aware
-    // you updated it's input while everything is still initializing (parent and child).
-    // This is a trick that will fire a function immediately (no time duration was given) after all
-    // initializing is done, which will trigger Angular's change detection and make the child components 
-    // aware their input was changed.
-    setTimeout(() => {
-      this.currentExerciseNumber = this.activeExcerciseIndex;
-      this.totalExerciseCount = this.exercises.length;
-    });
+    // Forces the lifecycle hooks of the first exercise manually injected into the DOM to run, 
+    // as well as the appropriate lifecyle hooks in this component after the exercise has been initialized.
+    // This is neccessary in order to get this ngAfterContentChecked hook to run after the exercise has been
+    // initialized so that we can subscribe to its subscriptions 
+    setTimeout(() => {});
   }
+
+  ngAfterContentChecked(): void {
+    if (this.showNextButtonSubscription === null && this.currentExercise !== undefined) {
+      this.showNextButtonSubscription = this.currentExercise.showNextButton$.subscribe({next: this.handleShowNextButtonEvent});
+    }
+  }
+
+  ngOnDestroy() {
+    this.showNextButtonSubscription.unsubscribe();
+  }
+
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   public tryAgain(): void {
     this.currentExercise.tryAgain();
@@ -58,5 +73,9 @@ export class LessonModuleComponent implements AfterViewInit {
       this.currentExerciseNumber--;
       this.exercises[this.activeExcerciseIndex].display();
     }
+  }
+
+  private handleShowNextButtonEvent(shouldShowNextButton: boolean) {
+    this.shouldShowNextButton = shouldShowNextButton;
   }
 }

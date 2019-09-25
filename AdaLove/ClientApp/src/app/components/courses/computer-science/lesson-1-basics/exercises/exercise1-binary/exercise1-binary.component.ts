@@ -1,5 +1,6 @@
 import { Component, forwardRef } from '@angular/core';
 import { Exercise } from 'src/app/core/abstract-classes/Exercise';
+import { Observable, Subject } from 'rxjs';
 
 @Component({
   selector: 'app-exercise1-binary',
@@ -8,12 +9,12 @@ import { Exercise } from 'src/app/core/abstract-classes/Exercise';
   providers: [{provide: Exercise, useExisting: forwardRef(() => Exercise1BinaryComponent)}]
 })
 export class Exercise1BinaryComponent extends Exercise {
+  private showNextButtonSource = new Subject<boolean>();
+  public showNextButton$: Observable<boolean> = this.showNextButtonSource.asObservable();
 
-  public tryAgain(): void {
-    console.log('Exercise 1 tryAgain fired.');
-  }
+  public tryAgain(): void { }
   
   public checkAnswer(): void {
-    console.log('Exercise 1 checkAnswer fired.');
+    this.showNextButtonSource.next(true);
   }
 }

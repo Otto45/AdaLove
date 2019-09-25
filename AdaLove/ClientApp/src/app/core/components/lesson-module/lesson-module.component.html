@@ -18,7 +18,7 @@
                 <div class="row align-items-center">
                     <div class="col-12">
                         <button type="button" class="btn btn-sm btn-primary float-left " (click)="previousExercise()">Previous</button>
-                        <button type="button" class="btn btn-sm btn-primary float-right " (click)="nextExercise()">Next</button>
+                        <button type="button" class="btn btn-sm btn-primary float-right" (click)="nextExercise()" *ngIf="shouldShowNextButton">Next</button>
                         <button type="button" class="btn btn-sm btn-success float-right " (click)="checkAnswer()">Check Answer</button>
                         <button type="button" class="btn btn-sm btn-danger float-right " (click)="tryAgain()">Try Again</button>
                     </div>
