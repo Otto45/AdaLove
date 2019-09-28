@@ -2,18 +2,25 @@
     <div class="col">
         <div class="training-text-section">
             <span>Before we get into how binary numbers work, we must understand how number systems work in general.</span>
-            <span>Our normal decimal number system is base 10, which means each digit in a number can have an integer value from 0 to 9.</span>
+            <span>Our normal number system is called the decimal system, and is base 10.</span>
+            <span>This means each digit in a number can have an integer value of 0, 1, 2, 3, 4, 5, 6, 7, 8, or 9.</span>
+            <span>Notice that there are 10 choices for a digit's value, matching the base number.</span>
         </div>
         <div class="training-text-section">
-            <span>The value of a digit in a number is based on the power of whatever the base is.</span>
+            <span>The position of a digit in a number also determines the digit's value, along with its integer value.</span>
+            <span>value = (integer value) x (base number) ^ (digit's position in number from right to left, starting at 0)</span>
+        </div>
+        <div class="training-text-section">
+            <span>In the number 87, the digit 8's value = 8 x 10^1 = 8 x 10 = 80.</span>
+        </div>
+        <div class="training-text-section">
+            <span>The values of all digits are summed (added together) to determine the value of the number the digits represent.</span>
             <span>Knowing this, we can break down a base-10 number the following way:</span>
         </div>
         <div class="training-text-section d-flex justify-content-center my-5">
             <span class="font-weight-bold" (mouseover)="enableNextButton()">17,543 = (1 x 10^4) + (7 x 10^3) + (5 x 10^2) + (4 x 10^1) + (3 x 10^0)</span>
         </div>
         <div class="training-text-section">
-            <span>Abstracting this out, each digit in a number = (its integer value) x (base number) ^ (digit's position in number)</span>
-            <span>You then add up each digit's value to equal the value of the entire number you are representing.</span>
             <span>With this understanding, we are ready to learn the binary number system.</span>
         </div>
     </div>
