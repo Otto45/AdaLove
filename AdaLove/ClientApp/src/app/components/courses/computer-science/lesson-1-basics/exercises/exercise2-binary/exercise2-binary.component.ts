@@ -9,14 +9,10 @@ import { Subject, Observable } from 'rxjs';
   providers: [{provide: Exercise, useExisting: forwardRef(() => Exercise2BinaryComponent)}]
 })
 export class Exercise2BinaryComponent extends Exercise {
-  private showNextButtonSource = new Subject<boolean>();
-  public showNextButton$: Observable<boolean> = this.showNextButtonSource.asObservable();
+  private enableNextButtonSource = new Subject<boolean>();
+  public enableNextButton$: Observable<boolean> = this.enableNextButtonSource.asObservable();
   
-  public tryAgain(): void {
-    console.log('Exercise 2 tryAgain fired.');
-  }
-  
-  public checkAnswer(): void {
-    console.log('Exercise 2 checkAnswer fired.');
+  public enableNextButton(): void {
+    this.enableNextButtonSource.next(true);
   }
 }
