@@ -13,6 +13,7 @@ import { LessonModuleComponent } from './core/components/lesson-module/lesson-mo
 import { ExerciseDirective } from './core/custom-directives/ExerciseDirective';
 import { Lesson1BasicsComponent } from './components/courses/computer-science/lesson-1-basics/lesson1-basics.component';
 import { LessonProgressBarComponent } from './core/components/lesson-progress-bar/lesson-progress-bar.component';
+import { Exercise3BinaryComponent } from './components/courses/computer-science/lesson-1-basics/exercises/exercise3-binary/exercise3-binary.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { LessonProgressBarComponent } from './core/components/lesson-progress-ba
     LessonModuleComponent,
     ExerciseDirective,
     Lesson1BasicsComponent,
-    LessonProgressBarComponent
+    LessonProgressBarComponent,
+    Exercise3BinaryComponent
   ],
   imports: [
     BrowserModule,
