@@ -6,3 +6,9 @@
     color: #e3ebf6;
     display: block;
 }
+
+.training-text-section p {
+    color: #e3ebf6;
+    margin-left: 50px;
+    margin-right: 50px;
+}

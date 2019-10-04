@@ -16,6 +16,7 @@ import { LessonProgressBarComponent } from './core/components/lesson-progress-ba
 import { Exercise3BinaryComponent } from './components/courses/computer-science/lesson-1-basics/exercises/binary-exercise3/binary-exercise3.component';
 import { BitsExercise1Component } from './components/courses/computer-science/lesson-1-basics/exercises/bits-exercise1/bits-exercise1.component';
 import { BitsExercise2Component } from './components/courses/computer-science/lesson-1-basics/exercises/bits-exercise2/bits-exercise2.component';
+import { ComputerArchitectureExercise1Component } from './components/courses/computer-science/lesson-1-basics/exercises/computer-architecture-exercise1/computer-architecture-exercise1.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { BitsExercise2Component } from './components/courses/computer-science/le
     LessonProgressBarComponent,
     Exercise3BinaryComponent,
     BitsExercise1Component,
-    BitsExercise2Component
+    BitsExercise2Component,
+    ComputerArchitectureExercise1Component
   ],
   imports: [
     BrowserModule,
