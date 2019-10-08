@@ -2,7 +2,7 @@
     <div class="col">
         <div class="training-text-section">
             <p>
-                As we begin our computer science journey, it is important to understand how a computer it setup under
+                As we begin our computer science journey, it is important to understand how a computer is setup under
                 the hood. All modern computers follow the same basic design, or architecture, invented by Von Neumann in
                 1945. The biggest exception is that modern computers use multiple busses as you see in the diagram,
                 rather than one as originally proposed by Von Neumann.
@@ -14,9 +14,48 @@
         </div>
         <div class="training-text-section">
             <p>
-                The CPU is the brain of the computer, performing all the calculations and executing all the instructions
-                that make up a program.
+                The CPU is the brain of the computer, performing all the calculations, instructions, and data fetches
+                from memory needed to run a program. A CPU is actually made up of many subcomponents, including the
+                Arithmetic Logic Unit (ALU), Control Unit (CU), Registers, and Cache. CPUs have many registers, whose
+                purpose is to hold the data that instructions will be executed on. The control unit is in charge of
+                fetching the next instruction from memory and executing it. If the instruction is a mathematical or
+                comparison operation, the control unit will use the ALU to execute this operation and store the result
+                in a register. Finally, the cache is a small memory store that the CPU uses to store commonly fetched
+                data from RAM. Because the cache is so close to the other CPU components, instructions execute much
+                faster than if the data has to be fetched from RAM. Caching is an extremely important topic in computer
+                science that can be applied in many situations to speed up tasks. Once a device is powered up and the
+                CPU receives power, it never stops fetching and executing instructions. This is called a "processor
+                clock cycle" or just "processor cycle". Fun Fact: Because a CPU's processor cycle is infinite as long as
+                it is on, it is usually up to the operating system to ensure there is always a next instruction to be
+                fetched and executed!
+            </p>
+            <p>
+                The memory, or RAM (Random Access Memory), is where the instructions and data for a program are stored,
+                to be read from or written to by the CPU. The memory is broken into single units called "cells," which
+                can store one byte of information. We'll learn more about bits, bytes, and binary numbers later! Each
+                cell has a unique numeric address which is used to read or write data to the correct cell. The CPU will
+                use the bus to send data and the cell's address if it wants to store data, or it will send just the
+                memory address if it wants to read data.
+            </p>
+            <p>
+                The system bus is what the CPU uses to communicate instructions and data to/from RAM and external
+                devices. The system bus is actually made up of multiple buses: the control bus, the address bus, and the
+                data bus. The address bus is used to send the numeric value cooresponding to the cell in memory the
+                current operation is working with. The data bus is used by the CPU to send the value to be written to
+                memory if a write operation is occurring. If a read operation is requested, the data read from memory
+                will travel back to the CPU on the data bus. The control bus is used by the CPU to send commands to
+                memory, like whether the operation is read or write, and to receive any status signals. As the diagram
+                shows, the system bus is also used to perform the same functions to and from I/O devices as well, like
+                hard drives. Status signals sent back to the CPU make more sense for these devices communicating on the
+                bus. To keep things as efficient as possible, when communicating with devices or memory, all information
+                needed is usually sent in one shot on all three busses.
+            </p>
+            <p>
+                Input and output (I/O) encompasses all devices that are external to this model, like hard drives,
+                keyboards, mice, etc. They all communicate with the CPU and vice versa using the system bus as well.
             </p>
         </div>
+        <!-- Short Term: Put each of these paragraphs in a modal that pops up when the appropriate part of the diagram is clicked. -->
+        <!-- Long term: Make a cool animation that shows the flow of data to and from the CPU, over the bus, and to RAM -->
     </div>
 </div>
