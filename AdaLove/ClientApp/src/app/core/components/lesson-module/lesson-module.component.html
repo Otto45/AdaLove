@@ -18,7 +18,8 @@
                 <div class="row align-items-center">
                     <div class="col-12">
                         <button type="button" class="btn btn-sm btn-primary float-left " (click)="previousExercise()" *ngIf="activeExcerciseIndex > 0">Previous</button>
-                        <button type="button" class="btn btn-sm btn-primary float-right" (click)="nextExercise()" [disabled]="!nextButtonIsEnabled">Next</button>
+                        <!-- <button type="button" class="btn btn-sm btn-primary float-right" (click)="nextExercise()" [disabled]="!nextButtonIsEnabled">Next</button> -->
+                        <button type="button" class="btn btn-sm btn-primary float-right" (click)="nextExercise()">Next</button>
                     </div>
                 </div>
             </div>

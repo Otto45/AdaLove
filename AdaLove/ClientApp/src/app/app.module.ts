@@ -17,6 +17,9 @@ import { Exercise3BinaryComponent } from './components/courses/computer-science/
 import { BitsExercise1Component } from './components/courses/computer-science/lesson-1-basics/exercises/bits-exercise1/bits-exercise1.component';
 import { BitsExercise2Component } from './components/courses/computer-science/lesson-1-basics/exercises/bits-exercise2/bits-exercise2.component';
 import { ComputerArchitectureExercise1Component } from './components/courses/computer-science/lesson-1-basics/exercises/computer-architecture-exercise1/computer-architecture-exercise1.component';
+import { BitsExercise3Component } from './components/courses/computer-science/lesson-1-basics/exercises/bits-exercise3/bits-exercise3.component';
+import { BitsExercise4Component } from './components/courses/computer-science/lesson-1-basics/exercises/bits-exercise4/bits-exercise4.component';
+import { BitsExercise5Component } from './components/courses/computer-science/lesson-1-basics/exercises/bits-exercise5/bits-exercise5.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,10 @@ import { ComputerArchitectureExercise1Component } from './components/courses/com
     Exercise3BinaryComponent,
     BitsExercise1Component,
     BitsExercise2Component,
-    ComputerArchitectureExercise1Component
+    ComputerArchitectureExercise1Component,
+    BitsExercise3Component,
+    BitsExercise4Component,
+    BitsExercise5Component
   ],
   imports: [
     BrowserModule,
