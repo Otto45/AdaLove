@@ -18,8 +18,10 @@ import { BitsExercise1Component } from './components/courses/computer-science/le
 import { BitsExercise2Component } from './components/courses/computer-science/lesson-1-basics/exercises/bits-exercise2/bits-exercise2.component';
 import { ComputerArchitectureExercise1Component } from './components/courses/computer-science/lesson-1-basics/exercises/computer-architecture-exercise1/computer-architecture-exercise1.component';
 import { BitsExercise3Component } from './components/courses/computer-science/lesson-1-basics/exercises/bits-exercise3/bits-exercise3.component';
-import { BitsExercise4Component } from './components/courses/computer-science/lesson-1-basics/exercises/bits-exercise4/bits-exercise4.component';
-import { BitsExercise5Component } from './components/courses/computer-science/lesson-1-basics/exercises/bits-exercise5/bits-exercise5.component';
+import { PrimitiveTypesExercise1Component } from './components/courses/computer-science/lesson-1-basics/exercises/primitive-types-exercise1/primitive-types-exercise1.component';
+import { PrimitiveTypesExercise2Component } from './components/courses/computer-science/lesson-1-basics/exercises/primitive-types-exercise2/primitive-types-exercise2.component';
+import { PrimitiveTypesExercise3Component } from './components/courses/computer-science/lesson-1-basics/exercises/primitive-types-exercise3/primitive-types-exercise3.component';
+
 
 @NgModule({
   declarations: [
@@ -39,8 +41,9 @@ import { BitsExercise5Component } from './components/courses/computer-science/le
     BitsExercise2Component,
     ComputerArchitectureExercise1Component,
     BitsExercise3Component,
-    BitsExercise4Component,
-    BitsExercise5Component
+    PrimitiveTypesExercise1Component,
+    PrimitiveTypesExercise2Component,
+    PrimitiveTypesExercise3Component
   ],
   imports: [
     BrowserModule,
