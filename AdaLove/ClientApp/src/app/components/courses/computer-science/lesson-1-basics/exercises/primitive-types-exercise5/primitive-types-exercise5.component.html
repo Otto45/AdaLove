@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col">
+        <div class="training-text-section">
+            In the previous exercise, you saw that the maximum size of an integer in a 32-bit machine is 4,294,967,295.
+            This is if the integer is unsigned. An integer can either be signed or unsigned. The difference is unsigned
+            integers can only store positive values, versus signed integers can store positive AND negative integers.
+            The important thing to know is that whether you allocate an unsigned or signed integer, you only get 4 bytes
+            on a 32-bit machine. Because you are only storing positive numbers in an unsigned integer, you can use the
+            full 32 bits across the 4 bytes to store numbers starting at 0 all the way to 4,294,967,295. For signed
+            integers however, the number range is split in half, so you can only represent 0 to 2,147,483,647 or 0 to
+            -2,147,483,648. The final bit in a signed integer is used to represent if the number is positive or
+            negative, so you lose a binary digit.
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col">
+        <div class="training-text-section">
+            Negative numbers are represented in a special way in most computers, so we’re going to take a second to show
+            you how they work. Negative numbers are represented using what is called “2’s-complement.” Let’s say you
+            have the number 5 in binary: 0101. The number -5 is represented in binary using 2’s complement as follows:
+            1011. How in the world did we get that, isn’t that the number 11 in binary?! Two things to note here. First,
+            remember that the last bit, furthest on the left, is used to represent the sign. Second, 2’s complement
+            works by taking the positive binary number, flipping all the bits, and then adding 1 to the result. So to
+            get -5, start with 5: 0101. Flip the bits: 1010. Now add 1: 1011. Easy right? Note that when we flip the
+            bits, we are flipping the sign bit as well, so that is taken care of. But why do we add 1? The purpose of
+            2’s complement is to represent positive and negative numbers so that you can add and subtract them as normal
+            in binary, and only have one representation of the number 0: all bits are 0. Also, when you flip the bits
+            and add 1, you can add any negative number to its positive 2’s complement and you will always get zero!
+            Check it out: 1011 + 0101 = 0000. Note, the one is carried all the way when doing the addition, but because
+            we’re out of bits to represent it, we just drop it and forget about it!
+        </div>
+    </div>
+</div>
