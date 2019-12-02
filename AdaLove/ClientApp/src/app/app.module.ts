@@ -21,6 +21,10 @@ import { BitsExercise3Component } from './components/courses/computer-science/le
 import { PrimitiveTypesExercise1Component } from './components/courses/computer-science/lesson-1-basics/exercises/primitive-types-exercise1/primitive-types-exercise1.component';
 import { PrimitiveTypesExercise2Component } from './components/courses/computer-science/lesson-1-basics/exercises/primitive-types-exercise2/primitive-types-exercise2.component';
 import { PrimitiveTypesExercise3Component } from './components/courses/computer-science/lesson-1-basics/exercises/primitive-types-exercise3/primitive-types-exercise3.component';
+import { PrimitiveTypesExercise4Component } from './components/courses/computer-science/lesson-1-basics/exercises/primitive-types-exercise4/primitive-types-exercise4.component';
+import { PrimitiveTypesExercise5Component } from './components/courses/computer-science/lesson-1-basics/exercises/primitive-types-exercise5/primitive-types-exercise5.component';
+import { PrimitiveTypesExercise6Component } from './components/courses/computer-science/lesson-1-basics/exercises/primitive-types-exercise6/primitive-types-exercise6.component';
+import { PrimitiveTypesExercise7Component } from './components/courses/computer-science/lesson-1-basics/exercises/primitive-types-exercise7/primitive-types-exercise7.component';
 
 
 @NgModule({
@@ -43,7 +47,11 @@ import { PrimitiveTypesExercise3Component } from './components/courses/computer-
     BitsExercise3Component,
     PrimitiveTypesExercise1Component,
     PrimitiveTypesExercise2Component,
-    PrimitiveTypesExercise3Component
+    PrimitiveTypesExercise3Component,
+    PrimitiveTypesExercise4Component,
+    PrimitiveTypesExercise5Component,
+    PrimitiveTypesExercise6Component,
+    PrimitiveTypesExercise7Component
   ],
   imports: [
     BrowserModule,
